@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+// <reference types="Cypress" />
 
 context('visual tests', () => {
 
@@ -66,25 +66,25 @@ context('visual tests', () => {
 		}
 	});
 
-	it('image attributes window', () => {
-		cy.get('body').type('{ctrl}e');
-		cy.get('.window:visible').matchImageSnapshot(withMuchTextCompareOptions);
-	});
+	// it('image attributes window', () => {
+	// 	cy.get('body').type('{ctrl}e');
+	// 	cy.get('.window:visible').matchImageSnapshot(withMuchTextCompareOptions);
+	// });
 
-	it('flip and rotate window', () => {
-		// @TODO: make menus more testable, with IDs
-		cy.get('.menus > .menu-container:nth-child(4) > .menu-button > .menu-hotkey').click();
-		cy.get('.menus > .menu-container:nth-child(4) > .menu-popup > table > tr:nth-child(1)').click();
-		cy.get('.window:visible').matchImageSnapshot(withMuchTextCompareOptions);
-	});
+	// it('flip and rotate window', () => {
+	// 	// @TODO: make menus more testable, with IDs
+	// 	cy.get('.menus > .menu-container:nth-child(4) > .menu-button > .menu-hotkey').click();
+	// 	cy.get('.menus > .menu-container:nth-child(4) > .menu-popup > table > tr:nth-child(1)').click();
+	// 	cy.get('.window:visible').matchImageSnapshot(withMuchTextCompareOptions);
+	// });
 
-	it('stretch and skew window', () => {
-		// @TODO: make menus more testable, with IDs
-		cy.get('.menus > .menu-container:nth-child(4) > .menu-button > .menu-hotkey').click();
-		cy.get('.menus > .menu-container:nth-child(4) > .menu-popup > table > tr:nth-child(2)').click();
-		// @TODO: wait for images to load and include images?
-		cy.get('.window:visible').matchImageSnapshot(Object.assign({}, withTextCompareOptions, { blackout: ["img"] }));
-	});
+	// it('stretch and skew window', () => {
+	// 	// @TODO: make menus more testable, with IDs
+	// 	cy.get('.menus > .menu-container:nth-child(4) > .menu-button > .menu-hotkey').click();
+	// 	cy.get('.menus > .menu-container:nth-child(4) > .menu-popup > table > tr:nth-child(2)').click();
+	// 	// @TODO: wait for images to load and include images?
+	// 	cy.get('.window:visible').matchImageSnapshot(Object.assign({}, withTextCompareOptions, { blackout: ["img"] }));
+	// });
 
 	it('help window', () => {
 		// @TODO: make menus more testable, with IDs
@@ -142,7 +142,7 @@ context('visual tests', () => {
 		}
 		cy.get('.window:visible').matchImageSnapshot(Object.assign({}, withTextCompareOptions));
 	};
-	it('modern theme edit colors dialog (expanded)', test_edit_colors_dialog);
+	// it('modern theme edit colors dialog (expanded)', test_edit_colors_dialog);
 
 	it('winter theme', () => {
 		selectTheme("Winter");
@@ -152,7 +152,7 @@ context('visual tests', () => {
 		cy.matchImageSnapshot(withTextCompareOptions);
 	});
 
-	it('winter theme edit colors dialog (expanded)', test_edit_colors_dialog);
+	// it('winter theme edit colors dialog (expanded)', test_edit_colors_dialog);
 
 	it('winter theme vertical color box', () => {
 		cy.wait(500);
