@@ -100,9 +100,9 @@
     "cy:install": "cypress install",
     "cy:run": "cypress run",
     "cy:accept": "cypress run --env updateSnapshots=true",
-    "test-in": "start-server-and-test test:start-server http://localhost:11822 cy:install",
-    "test": "start-server-and-test test:start-server http://localhost:11822 cy:run",
-    "accept": "start-server-and-test test:start-server http://localhost:11822 cy:accept"
+    "test-in": "start-server-and-test test:start-server http://localhost:11822/ cy:install",
+    "test": "start-server-and-test test:start-server http://localhost:11822/ cy:run",
+    "accept": "start-server-and-test test:start-server http://localhost:11822/ cy:accept"
   },
   "repository": {
     "type": "git",
