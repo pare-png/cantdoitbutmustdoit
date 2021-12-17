@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+//<reference types="Cypress" />
 
 context('tool tests', () => {
 	// @TODO: make rounded tools render consistently across platforms
@@ -35,7 +35,7 @@ context('tool tests', () => {
 		target = target || win.$(".main-canvas")[0];
 		let startWithinRect = target.getBoundingClientRect();
 		let canvasAreaRect = win.$(".canvas-area")[0].getBoundingClientRect();
-	
+
 		let startMinX = Math.max(startWithinRect.left, canvasAreaRect.left);
 		let startMaxX = Math.min(startWithinRect.right, canvasAreaRect.right);
 		let startMinY = Math.max(startWithinRect.top, canvasAreaRect.top);
@@ -44,7 +44,7 @@ context('tool tests', () => {
 		let startPointY = startMinY + start.y * (startMaxY - startMinY);
 		let endPointX = startMinX + end.x * (startMaxX - startMinX);
 		let endPointY = startMinY + end.y * (startMaxY - startMinY);
-	
+
 		const $cursor = win.$(`<img src="images/cursors/default.png" class="user-cursor"/>`);
 		$cursor.css({
 			position: "absolute",
@@ -57,7 +57,7 @@ context('tool tests', () => {
 		});
 		$cursor.appendTo(".jspaint");
 		let triggerMouseEvent = (type, point) => {
-			
+
 			const clientX = point.x;
 			const clientY = point.y;
 			// const el_over = win.document.elementFromPoint(clientX, clientY);
@@ -72,7 +72,7 @@ context('tool tests', () => {
 			if (do_nothing) {
 				return;
 			}
-	
+
 			let event = new win.$.Event(type, {
 				view: window,
 				bubbles: true,
@@ -89,7 +89,7 @@ context('tool tests', () => {
 			});
 			win.$(target).trigger(event);
 		};
-	
+
 		let t = 0;
 		const stepsInGesture = 3;
 		let pointForTime = (t) => {
@@ -98,7 +98,7 @@ context('tool tests', () => {
 				y: startPointY + (endPointY - startPointY) * Math.pow(t, 0.3),
 			};
 		};
-		
+
 		return new Promise((resolve)=> {
 			triggerMouseEvent("pointerenter", pointForTime(t)); // so dynamic cursors follow the simulation cursor
 			triggerMouseEvent("pointerdown", pointForTime(t));
@@ -112,9 +112,8 @@ context('tool tests', () => {
 				// }
 				if (t > 1) {
 					triggerMouseEvent("pointerup", pointForTime(t));
-					
+
 					$cursor.remove();
-		
 					resolve();
 				} else {
 					triggerMouseEvent("pointermove", pointForTime(t));
@@ -191,7 +190,7 @@ context('tool tests', () => {
 		cy.get(".main-canvas").matchImageSnapshot();
 	});
 
-	["Brush", "Pencil", "Rectangle", "Rounded Rectangle", "Ellipse", "Line"].forEach((toolName)=> {
+	["Brush", "Pencil", "Rectangle", "Rounded Rectangle", "Line"].forEach((toolName)=> {
 		it(`${toolName.toLowerCase()} tool`, () => {
 			cy.get(`.tool[title='${toolName}']`).click();
 			// gesture([{x: 50, y: 50}, {x: 100, y: 100}]);
