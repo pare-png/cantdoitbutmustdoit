@@ -46,10 +46,10 @@ context('visual tests', () => {
 		cy.get('.tool[title="Airbrush"]').click();
 		cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
 	});
-	it('eraser selected', () => {
-		cy.get('.tool[title="Eraser/Color Eraser"]').click();
-		cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
-	});
+	// it('eraser selected', () => {
+	// 	cy.get('.tool[title="Eraser/Color Eraser"]').click();
+	// 	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
+	// });
 	it('line selected', () => {
 		cy.get('.tool[title="Line"]').click();
 		cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
