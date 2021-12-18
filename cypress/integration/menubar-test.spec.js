@@ -1,6 +1,6 @@
 // <reference types="Cypress" />
 
-context('third test', () => {
+context('Menu bar test', () => {
 
     const withTextCompareOptions = {
         failureThreshold: 0.05,
