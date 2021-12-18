@@ -30,41 +30,41 @@ context('visual tests', () => {
 		cy.matchImageSnapshot(withTextCompareOptions);
 	});
 
-	it('brush selected', () => {
-		cy.get('.tool[title="Brush"]').click();
-		cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
-	});
-	it('select selected', () => {
-		cy.get('.tool[title="Select"]').click();
-		cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
-	});
-	it('magnifier selected', () => {
-		cy.get('.tool[title="Magnifier"]').click();
-		cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
-	});
-	it('airbrush selected', () => {
-		cy.get('.tool[title="Airbrush"]').click();
-		cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
-	});
-	// it('eraser selected', () => {
-	// 	cy.get('.tool[title="Eraser/Color Eraser"]').click();
+	// it('brush selected', () => {
+	// 	cy.get('.tool[title="Brush"]').click();
 	// 	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
 	// });
-	it('line selected', () => {
-		cy.get('.tool[title="Line"]').click();
-		cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
-	});
-	it('rectangle selected', () => {
-		cy.get('.tool[title="Rectangle"]').click();
-		cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
-	});
+	// it('select selected', () => {
+	// 	cy.get('.tool[title="Select"]').click();
+	// 	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
+	// });
+	// it('magnifier selected', () => {
+	// 	cy.get('.tool[title="Magnifier"]').click();
+	// 	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
+	// });
+	// it('airbrush selected', () => {
+	// 	cy.get('.tool[title="Airbrush"]').click();
+	// 	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
+	// });
+	// it('eraser selected', () => {
+	//  	cy.get('.tool[title="Eraser/Color Eraser"]').click();
+	//  	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
+	//  });
+	// it('line selected', () => {
+	// 	cy.get('.tool[title="Line"]').click();
+	// 	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
+	// });
+	// it('rectangle selected', () => {
+	// 	cy.get('.tool[title="Rectangle"]').click();
+	// 	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
+	// });
 
-	beforeEach(()=> {
-		if (Cypress.$('.window:visible')[0]) {
-			cy.get('.window:visible .window-close-button').click();
-			cy.get('.window').should('not.be.visible');
-		}
-	});
+	// beforeEach(()=> {
+	// 	if (Cypress.$('.window:visible')[0]) {
+	// 		cy.get('.window:visible .window-close-button').click();
+	// 		cy.get('.window').should('not.be.visible');
+	// 	}
+	// });
 
 	// it('image attributes window', () => {
 	// 	cy.get('body').type('{ctrl}e');
