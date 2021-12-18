@@ -59,12 +59,12 @@ context('visual tests', () => {
 	// 	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
 	// });
 
-	// beforeEach(()=> {
-	// 	if (Cypress.$('.window:visible')[0]) {
-	// 		cy.get('.window:visible .window-close-button').click();
-	// 		cy.get('.window').should('not.be.visible');
-	// 	}
-	// });
+	beforeEach(()=> {
+	 	if (Cypress.$('.window:visible')[0]) {
+	 		cy.get('.window:visible .window-close-button').click();
+	 		cy.get('.window').should('not.be.visible');
+	 	}
+	 });
 
 	// it('image attributes window', () => {
 	// 	cy.get('body').type('{ctrl}e');
