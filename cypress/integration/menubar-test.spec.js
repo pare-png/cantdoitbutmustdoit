@@ -1,14 +1,13 @@
 // <reference types="Cypress" />
-
 context('Menu bar test', () => {
 
     const withTextCompareOptions = {
         failureThreshold: 0.05,
-        failureThresholdType: 'percent'// not actually percent - fraction
+        failureThresholdType: 'percent' // not actually percent - fraction
     };
     const withMuchTextCompareOptions = {
         failureThreshold: 0.08,
-        failureThresholdType: 'percent'// not actually percent - fraction
+        failureThresholdType: 'percent' // not actually percent - fraction
     };
     const toolboxCompareOptions = {
         failureThreshold: 40,
