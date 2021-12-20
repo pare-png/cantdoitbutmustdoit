@@ -33,10 +33,10 @@ context('Menu bar test', () => {
 		cy.get('.tool[title="Magnifier"]').click();
 		cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
 	});
-	it('airbrush selected', () => {
-		cy.get('.tool[title="Airbrush"]').click();
-		cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
-	});
+	// it('airbrush selected', () => {
+	// 	cy.get('.tool[title="Airbrush"]').click();
+	// 	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
+	// });
 	it('eraser selected', () => {
 	 	cy.get('.tool[title="Eraser/Color Eraser"]').click();
 	 	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
