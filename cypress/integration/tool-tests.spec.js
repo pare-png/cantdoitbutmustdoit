@@ -4,7 +4,7 @@ context('tool tests', () => {
 	// @TODO: make rounded tools render consistently across platforms
 	const roundedToolsCompareOptions = {
 		failureThreshold: 13,
-		failureThresholdType: 'pixel'
+		failureThresholdType: 'pixel' //test
 	};
 
 	// beforeAll isn't a thing, and beforeEach applies also to tests declared above it,
