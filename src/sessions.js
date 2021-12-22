@@ -168,7 +168,7 @@
 			away: true,
 		},
 		// Currently selected tool (@TODO)
-		tool: localize("Pencil"),
+		tool: localize("Pen"),
 		// Color components
 		hue: ~~(Math.random() * 360),
 		saturation: ~~(Math.random() * 50) + 50,
