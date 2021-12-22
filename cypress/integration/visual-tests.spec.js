@@ -23,6 +23,7 @@ context('visual tests', () => {
 		cy.wait(1000); // give a bit of time for theme to load
 	};
 
+	//set up JS Paint, load web page app
 	it('main screenshot', () => {
 		cy.visit('/');
 		cy.setResolution([760, 490]);
