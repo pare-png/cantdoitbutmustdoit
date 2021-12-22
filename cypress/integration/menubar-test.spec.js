@@ -1,5 +1,5 @@
 // <reference types="Cypress" />
-
+//
 context('Menu bar test', () => {
 
     const withTextCompareOptions = {
@@ -38,8 +38,7 @@ context('Menu bar test', () => {
 	//  	cy.get('.tool[title="Airbrush"]').click();
 	//  	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
 	// });
-	//
-	//
+	
 	it('eraser selected', () => {
 	 	cy.get('.tool[title="Eraser/Color Eraser"]').click();
 	 	cy.get('.tools-component').matchImageSnapshot(toolboxCompareOptions);
