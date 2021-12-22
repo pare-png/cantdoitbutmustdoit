@@ -7,6 +7,7 @@ context('tool tests', () => {
 		failureThresholdType: 'pixel' //test
 	};
 	//
+	//little changes
 	// beforeAll isn't a thing, and beforeEach applies also to tests declared above it,
 	// so do this fake test + flag hack in order to execute some steps before the first test
 	let before_first_real_test = true;
