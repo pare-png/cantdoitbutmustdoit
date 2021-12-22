@@ -7,7 +7,7 @@ const looksLikeChrome = !!(window.chrome && (chrome.loadTimes || chrome.csi));
 window.menus = {
 	[localize("&File")]: [
 		{
-			item: localize("&Rew"),
+			item: localize("&Opal"),
 			shortcut: "Ctrl+Alt+N", // Ctrl+N opens a new browser window
 			speech_recognition: [
 				"new", "new file", "new document", "create new document", "create a new document", "start new document", "start a new document",
@@ -212,7 +212,7 @@ window.menus = {
 			description: localize("Quits Paint."),
 		}
 	],
-	[localize("&Edit")]: [
+	[localize("&Modified")]: [
 		{
 			item: localize("&Undo"),
 			shortcut: "Ctrl+Z",
