@@ -194,7 +194,7 @@ context('tool tests', () => {
 		cy.get(".main-canvas").matchImageSnapshot();
 	});
 
-	["Brush", "Pen", "Rectangle", "Rounded Rectangle", "Line"].forEach((toolName)=> {
+	["Brush", "Pencil", "Rectangle", "Rounded Rectangle", "Line"].forEach((toolName)=> {
 		it(`${toolName.toLowerCase()} tool`, () => {
 			cy.get(`.tool[title='${toolName}']`).click();
 			// gesture([{x: 50, y: 50}, {x: 100, y: 100}]);
