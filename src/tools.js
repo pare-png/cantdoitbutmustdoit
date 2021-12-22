@@ -609,7 +609,7 @@ window.tools = [{
 	$options: $choose_magnification
 }, {
 	id: TOOL_PENCIL,
-	name: localize("Pencil"),
+	name: localize("Pen"),
 	speech_recognition: [
 		"pencil", "lead", "graphite", "pen", "pixel", "pixel art", "penciling", "penning", "pixeling",
 	],
