@@ -7,7 +7,7 @@ const looksLikeChrome = !!(window.chrome && (chrome.loadTimes || chrome.csi));
 window.menus = {
 	[localize("&File")]: [
 		{
-			item: localize("&Opal"),
+			item: localize("&Rew"),
 			shortcut: "Ctrl+Alt+N", // Ctrl+N opens a new browser window
 			speech_recognition: [
 				"new", "new file", "new document", "create new document", "create a new document", "start new document", "start a new document",
@@ -16,7 +16,7 @@ window.menus = {
 			description: localize("Creates a new document."),
 		},
 		{
-			item: localize("&Open"),
+			item: localize("&Opal"),
 			shortcut: "Ctrl+O",
 			speech_recognition: [
 				"open", "open document", "open file", "open an image file", "open a document", "open a file",
@@ -28,7 +28,7 @@ window.menus = {
 			description: localize("Opens an existing document."),
 		},
 		{
-			item: localize("&Save"),
+			item: localize("&Pare"),
 			shortcut: "Ctrl+S",
 			speech_recognition: [
 				"save", "save document", "save file", "save image", "save picture", "save image file",
@@ -39,7 +39,7 @@ window.menus = {
 			description: localize("Saves the active document."),
 		},
 		{
-			item: localize("Save &As"),
+			item: localize("Save &New"),
 			// in mspaint, no shortcut is listed; it supports F12 (but in a browser that opens the dev tools)
 			// it doesn't support Ctrl+Shift+S but that's a good & common modern shortcut
 			shortcut: "Ctrl+Shift+S",
@@ -59,7 +59,7 @@ window.menus = {
 		},
 		MENU_DIVIDER,
 		{
-			item: localize("&Load From URL"),
+			item: localize("&Load From Nat"),
 			// shortcut: "Ctrl+L",
 			speech_recognition: [
 				"load from url",
