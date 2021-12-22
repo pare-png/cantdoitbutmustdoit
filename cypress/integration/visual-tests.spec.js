@@ -102,7 +102,7 @@ context('visual tests', () => {
 		cy.get('.menus > .menu-container:nth-child(6) > .menu-popup > table > tr:nth-child(3)').click();
 		cy.get('.window:visible').matchImageSnapshot(Object.assign({}, withMuchTextCompareOptions, { blackout: ["img", "#maybe-outdated-line"] }));
 	});
-	//workflow eye gaze mode
+	//eye gaze mode
 	it('eye gaze mode', () => {
 		cy.get('.tool[title="Select"]').click();
 		cy.contains(".menu-button", "Extras").click();
