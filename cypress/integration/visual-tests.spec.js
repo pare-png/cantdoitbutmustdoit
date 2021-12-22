@@ -85,7 +85,7 @@ context('visual tests', () => {
 	// 	// @TODO: wait for images to load and include images?
 	// 	cy.get('.window:visible').matchImageSnapshot(Object.assign({}, withTextCompareOptions, { blackout: ["img"] }));
 	// });
-
+//
 	it('help window', () => {
 		// @TODO: make menus more testable, with IDs
 		cy.get('.menus > .menu-container:nth-child(6) > .menu-button > .menu-hotkey').click();
